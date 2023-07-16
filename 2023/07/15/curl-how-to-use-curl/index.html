@@ -10,6 +10,10 @@
 <h3 id="header指定content-type為json"><a href="#header指定content-type為json" class="headerlink" title="header指定content-type為json"></a>header指定content-type為json</h3><p>使用參數 <code>-H</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST -H <span class="string">&quot;Content-Type: application/json&quot;</span> <span class="string">&quot;http://localhost:8000&quot;</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="header指定content-type為json-並指定json內容"><a href="#header指定content-type為json-並指定json內容" class="headerlink" title="header指定content-type為json, 並指定json內容"></a>header指定content-type為json, 並指定json內容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST -H <span class="string">&quot;Content-Type: application/json&quot;</span> <span class="string">&quot;http://localhost:8000&quot;</span> -d <span class="string">&#x27;&#123;&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>例子:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST -H <span class="string">&quot;Content-Type: application/json&quot;</span> <span class="string">&quot;http://localhost:8000&quot;</span> -d <span class="string">&#x27;&#123;&quot;name&quot;:&quot;張三&quot;, &quot;age&quot;:&quot;25&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="More-Info"><a href="#More-Info" class="headerlink" title="More Info :"></a>More Info :</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.techbridge.cc/2019/02/01/linux-curl-command-tutorial/">Linux Curl Command 指令與基本操作入門教學</a></li>
