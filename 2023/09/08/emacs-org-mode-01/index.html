@@ -1,25 +1,111 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>Learn Org Mode | Just For Fun</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/very-simple.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Hexo 6.3.0"></head><body><!-- include the sidebar--><!-- include ./includes/sidebar.jade--><!-- Blog title and subtitle--><header><div class="container header"><a id="logo" href="/." class="title">Just For Fun</a><span class="subtitle"></span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div></header><!-- use checkbox hack for toggle nav-bar on small screens--><input id="menu" type="checkbox"><!-- Navigation Links--><nav id="nav"><div class="container"><a href="/" class="sidebar-nav-item active">Home</a><a href="/archives" class="sidebar-nav-item">Archives</a></div></nav><div id="header-margin-bar"></div><!-- gallery that comes before the header--><div class="wrapper"><div class="container post-header"><h1>Learn Org Mode</h1></div></div><div class="wrapper"><div class="container meta"><div class="post-time">2023-09-08</div></div></div><article><div class="container post"><p>以前曾看過Org Mode,覺得很神奇,但因為要記憶很多命令,老是記不住,過一段時間就全忘了.<br>這次有了Blog,記錄一下學習的過程.</p>
-<h3 id="Org-Mode基本使用"><a href="#Org-Mode基本使用" class="headerlink" title="Org Mode基本使用"></a>Org Mode基本使用</h3><p>   |—————+———–+————-|<br>   | Command       | Key       | Description |<br>   |—————+———–+————-|<br>   | org-cycle     | <TAB>     |             |<br>   | org-shifttab  | S-<TAB>   |             |<br>   | org-metaup    | M-<UP>    |             |<br>   | org-metadown  | M-<DOWN>  |             |<br>   | org-metaleft  | M-<LEFT>  |             |<br>   | org-metaright | M-<RIGHT> |             |<br>   |—————+———–+————-|</p>
-<h3 id="Org-Organizer"><a href="#Org-Organizer" class="headerlink" title="Org Organizer"></a>Org Organizer</h3><p>   |————————–+———+————————————————————————|<br>   | Command                  | Key     | Description                                                            |<br>   |————————–+———+————————————————————————|<br>   | org-todo                 | C-c C-t | You can customize the keywords via the variable ‘org-todo-keywords’    |<br>   | org-schedule             | C-c C-s |                                                                        |<br>   | org-deadline             | C-c C-d |                                                                        |<br>   | org-agenda               |         |                                                                        |<br>   | org-agenda-file-to-front | C-c [   | Once you have some TODO items planned in an Org file, you can add that |<br>   |                          |         | file to the list of “agenda files”. The list of agenda files is stored |<br>   |                          |         | in the variable ‘org-agenda-files’                                     |<br>   |————————–+———+————————————————————————|</p>
-<h3 id="Org-Authoring"><a href="#Org-Authoring" class="headerlink" title="Org Authoring"></a>Org Authoring</h3><p>   |————+———+————-|<br>   | Command    | Key     | Description |<br>   |————+———+————-|<br>   | org-export | C-c C-e |             |<br>   |————+———+————-|</p>
-<pre><code>To export several files at once to a specific directory, either
-locally or over the network, you must define a list of projects through
-the variable ‘org-publish-project-alist’.
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>Emacs - Learn Org Mode | Just For Fun</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/very-simple.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Hexo 6.3.0"></head><body><!-- include the sidebar--><!-- include ./includes/sidebar.jade--><!-- Blog title and subtitle--><header><div class="container header"><a id="logo" href="/." class="title">Just For Fun</a><span class="subtitle"></span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div></header><!-- use checkbox hack for toggle nav-bar on small screens--><input id="menu" type="checkbox"><!-- Navigation Links--><nav id="nav"><div class="container"><a href="/" class="sidebar-nav-item active">Home</a><a href="/archives" class="sidebar-nav-item">Archives</a></div></nav><div id="header-margin-bar"></div><!-- gallery that comes before the header--><div class="wrapper"><div class="container post-header"><h1>Emacs - Learn Org Mode</h1></div></div><div class="wrapper"><div class="container meta"><div class="post-time">2023-09-08</div></div></div><article><div class="container post"><p>以前曾看過Org Mode,覺得很神奇,但因為要記憶很多命令,老是記不住,過一段時間就全忘了.<br>這次有了Blog,記錄一下學習的過程.</p>
+<h3 id="Org-Mode基本使用"><a href="#Org-Mode基本使用" class="headerlink" title="Org Mode基本使用"></a>Org Mode基本使用</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>org-cycle</td>
+<td><TAB></td>
+<td></td>
+</tr>
+<tr>
+<td>org-shifttab</td>
+<td>S-<TAB></td>
+<td></td>
+</tr>
+<tr>
+<td>org-metaup</td>
+<td>M-<UP></td>
+<td></td>
+</tr>
+<tr>
+<td>org-metadown</td>
+<td>M-<DOWN></td>
+<td></td>
+</tr>
+<tr>
+<td>org-metaleft</td>
+<td>M-<LEFT></td>
+<td></td>
+</tr>
+<tr>
+<td>org-metaright</td>
+<td>M-<RIGHT></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Org-Organizer"><a href="#Org-Organizer" class="headerlink" title="Org Organizer"></a>Org Organizer</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>org-todo</td>
+<td>C-c C-t</td>
+<td>You can customize the keywords via the variable ‘org-todo-keywords’</td>
+</tr>
+<tr>
+<td>org-schedule</td>
+<td>C-c C-s</td>
+<td></td>
+</tr>
+<tr>
+<td>org-deadline</td>
+<td>C-c C-d</td>
+<td></td>
+</tr>
+<tr>
+<td>org-agenda</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>org-agenda-file-to-front</td>
+<td>C-c [</td>
+<td>Once you have some TODO items planned in an Org file, you can add that</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>file to the list of “agenda files”. The list of agenda files is stored</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>in the variable ‘org-agenda-files’</td>
+</tr>
+</tbody></table>
+<h3 id="Org-Authoring"><a href="#Org-Authoring" class="headerlink" title="Org Authoring"></a>Org Authoring</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>org-export</td>
+<td>C-c C-e</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>   To export several files at once to a specific directory, either<br>   locally or over the network, you must define a list of projects through<br>   the variable ‘org-publish-project-alist’.</p>
+<ul>
+<li>This text is &#x2F;emphasized&#x2F;</li>
+<li>This text is <em>in bold</em></li>
+<li>This text is <em>underlined</em></li>
+<li>This text uses &#x3D;a teletype font&#x3D;</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#+begin_quote</span><br><span class="line">``This is a quote.&#x27;&#x27;</span><br><span class="line">#+end_quote</span><br></pre></td></tr></table></figure>
 
-- This text is /emphasized/
-- This text is *in bold*
-- This text is _underlined_
-- This text uses =a teletype font=
-
-#+begin_quote
-``This is a quote.&#39;&#39;
-#+end_quote
-
-#+begin_example
-This is an example.
-#+end_example
-</code></pre>
-</div><!-- comment system--><div class="container"><hr></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"><a href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a></div><div class="footer">© 2023 <a href="/" rel="nofollow">Ray Kuo</a>. Powered by <a rel="nofollow" target="_blank" href="https://hexo.io">Hexo</a>. Theme <a target="_blank" href="https://github.com/lotabout/very-simple">very-simple</a>.</div></div></div></footer><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#+begin_example</span><br><span class="line">This is an example.</span><br><span class="line">#+end_example</span><br></pre></td></tr></table></figure></div><!-- comment system--><div class="container"><hr></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"><a href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a></div><div class="footer">© 2023 <a href="/" rel="nofollow">Ray Kuo</a>. Powered by <a rel="nofollow" target="_blank" href="https://hexo.io">Hexo</a>. Theme <a target="_blank" href="https://github.com/lotabout/very-simple">very-simple</a>.</div></div></div></footer><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
     $(".fancybox").fancybox();
 });
 </script></body></html>
